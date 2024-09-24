@@ -2,6 +2,10 @@
 
 This is a simple Stone, Paper, Scissors game built using the MERN stack (MongoDB, Express, React, and Node.js). The game allows two players to compete in multiple rounds, and their choices, results, and winner are saved in a MongoDB database. The app also allows viewing all past games.
 
+## App link
+
+https://game-mern-app.netlify.app
+
 ## Features
 
 - Play a 6-round Stone, Paper, Scissors game between two players.
