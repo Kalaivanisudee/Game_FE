@@ -8,7 +8,7 @@ function AllGamesPage() {
 
     useEffect(() => {
         const fetchGames = async () => {
-            const response = await axios.get('http://localhost:8000/api/games');
+            const response = await axios.get('https://game-be-c3tb.onrender.com/api/games');
             setGames(response.data);
         };
         fetchGames();

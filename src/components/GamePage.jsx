@@ -44,7 +44,7 @@ function GamePage() {
     };
 
     const saveGame = async () => {
-        await axios.post('http://localhost:8000/api/games', {
+        await axios.post('https://game-be-c3tb.onrender.com/api/games', {
             player1,
             player2,
             rounds,
