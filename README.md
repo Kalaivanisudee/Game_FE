@@ -6,6 +6,10 @@ This is a simple Stone, Paper, Scissors game built using the MERN stack (MongoDB
 
 https://game-mern-app.netlify.app
 
+## Demo video link
+
+https://github.com/user-attachments/assets/3561b366-1f49-4cd6-babe-3ace3883a095
+
 ## Features
 
 - Play a 6-round Stone, Paper, Scissors game between two players.
