@@ -8,7 +8,7 @@ https://game-mern-app.netlify.app
 
 ## Demo video link
 
-https://github.com/user-attachments/assets/3561b366-1f49-4cd6-babe-3ace3883a095
+https://github.com/user-attachments/assets/ee592e89-e283-4ce6-8720-499bb52f900a
 
 ## Features
 
