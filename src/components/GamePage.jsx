@@ -27,29 +27,34 @@ function GamePage() {
             (player1Choice === 'Paper' && player2Choice === 'Stone')
         ) {
             result = player1;
-            setScore({ ...score, player1: score.player1 + 1 });
+            setScore((prevScore) => ({ ...prevScore, player1: prevScore.player1 + 1 }));
         } else {
             result = player2;
-            setScore({ ...score, player2: score.player2 + 1 });
+            setScore((prevScore) => ({ ...prevScore, player2: prevScore.player2 + 1 }));
         }
 
-        setRounds([...rounds, { player1Choice, player2Choice, result }]);
+        setRounds((prevRounds) => [...prevRounds, { player1Choice, player2Choice, result }]);
 
         if (currentRound === 6) {
-            setWinner(score.player1 > score.player2 ? player1 : player2);
-            saveGame();
+            const finalWinner = score.player1 > score.player2 ? player1 : player2;
+            setWinner(finalWinner);
+            saveGame(player1, player2, rounds, finalWinner);
         } else {
             setCurrentRound(currentRound + 1);
         }
     };
 
-    const saveGame = async () => {
-        await axios.post('https://game-be-c3tb.onrender.com/api/games', {
-            player1,
-            player2,
-            rounds,
-            winner,
-        });
+    const saveGame = async (player1, player2, rounds, winner) => {
+        try {
+            await axios.post('https://game-be-c3tb.onrender.com/api/games', {
+                player1,
+                player2,
+                rounds,
+                winner,
+            });
+        } catch (error) {
+            console.error('Error saving the game:', error);
+        }
     };
 
     return (
